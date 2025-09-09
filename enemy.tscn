@@ -1,11 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://dxqrqlsnlah6i"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_qi2p4"]
+[ext_resource type="Script" uid="uid://bixc66ljsd05" path="res://enemy.gd" id="1_qi2p4"]
 [ext_resource type="Texture2D" uid="uid://dlu5masyr6xbs" path="res://SAI/sai1.png" id="2_iifgy"]
 [ext_resource type="Texture2D" uid="uid://xojcfynujbus" path="res://SAI/sai2.png" id="3_epg4t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5vw27"]
-radius = 7.45766
+radius = 7.45765
 height = 14.9153
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4c57u"]
