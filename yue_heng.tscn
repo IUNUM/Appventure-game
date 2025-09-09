@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b7u08kvpo4gr3"]
+[gd_scene load_steps=23 format=3 uid="uid://b7u08kvpo4gr3"]
 
 [ext_resource type="Texture2D" uid="uid://g1x6l71tqccp" path="res://Bandits/Sprites/Heavy Bandit/Run/HeavyBandit_Run_0.png" id="1_k2b5i"]
 [ext_resource type="Texture2D" uid="uid://dfxn5b8w72e7b" path="res://Bandits/Sprites/Heavy Bandit/Run/HeavyBandit_Run_1.png" id="2_010ss"]
@@ -21,39 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://fkhunakblbaw" path="res://Bandits/Sprites/Heavy Bandit/Idle/HeavyBandit_Idle_2.png" id="19_2qdqo"]
 [ext_resource type="Texture2D" uid="uid://cbacb2btkhwcc" path="res://Bandits/Sprites/Heavy Bandit/Idle/HeavyBandit_Idle_3.png" id="20_5w1o1"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7dm0k"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_k2b5i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_010ss")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_xxeyh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_dg2bk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_plc8r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_mj5d7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_xksn8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_epldd")
-}],
-"loop": true,
-"name": &"default",
-"speed": 8.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t52ob"]
+size = Vector2(27, 36)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ntx8l"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_b17eg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -81,15 +52,9 @@ animations = [{
 "texture": ExtResource("16_tycug")
 }],
 "loop": true,
-"name": &"default",
+"name": &"attack",
 "speed": 8.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t52ob"]
-size = Vector2(27, 36)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_b17eg"]
-animations = [{
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("17_6lij7")
@@ -104,22 +69,40 @@ animations = [{
 "texture": ExtResource("20_5w1o1")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_k2b5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_010ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xxeyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dg2bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_plc8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mj5d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xksn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_epldd")
+}],
+"loop": true,
+"name": &"running",
 "speed": 8.0
 }]
 
 [node name="Yue Heng" type="CharacterBody2D"]
-
-[node name="Running" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_7dm0k")
-frame_progress = 0.279944
-
-[node name="Attack" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(3, 0)
-sprite_frames = SubResource("SpriteFrames_ntx8l")
-frame_progress = 0.443412
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 4)
@@ -129,4 +112,5 @@ shape = SubResource("RectangleShape2D_t52ob")
 texture_filter = 1
 position = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_b17eg")
-frame_progress = 0.194479
+animation = &"running"
+frame_progress = 0.432676

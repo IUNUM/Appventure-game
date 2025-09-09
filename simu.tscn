@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://e74xy7ppvodt"]
+[gd_scene load_steps=24 format=3 uid="uid://e74xy7ppvodt"]
 
 [ext_resource type="Texture2D" uid="uid://bjyj56oegunly" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_0.png" id="1_boicq"]
+[ext_resource type="Script" uid="uid://dhist6v67hscj" path="res://simu.gd" id="1_e0j1e"]
 [ext_resource type="Texture2D" uid="uid://cr32k3t4a02vh" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_1.png" id="2_e0j1e"]
 [ext_resource type="Texture2D" uid="uid://ulc24wio2wbw" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_2.png" id="3_yhhf5"]
 [ext_resource type="Texture2D" uid="uid://888ha7d8sukh" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_3.png" id="4_htewe"]
@@ -21,59 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c2t7ougynl016" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_6.png" id="19_f2ybs"]
 [ext_resource type="Texture2D" uid="uid://b172sftlpnpy" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_7.png" id="20_11kih"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ig7tw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_boicq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_e0j1e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_yhhf5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_htewe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_kvdkd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_8syfu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_qnfle")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_jsrfs")
-}],
-"loop": true,
-"name": &"default",
-"speed": 8.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_uatky"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_u6rtj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_bpfrp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_bc1s2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_w68gy")
-}],
-"loop": true,
-"name": &"default",
-"speed": 8.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rqtf5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -101,32 +50,67 @@ animations = [{
 "texture": ExtResource("20_11kih")
 }],
 "loop": true,
-"name": &"default",
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_u6rtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bpfrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bc1s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w68gy")
+}],
+"loop": true,
+"name": &"idle",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_boicq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e0j1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yhhf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_htewe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kvdkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8syfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qnfle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jsrfs")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t52ob"]
 size = Vector2(27, 36)
 
 [node name="Simu" type="CharacterBody2D"]
+script = ExtResource("1_e0j1e")
 
-[node name="Running" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-2, -4)
-sprite_frames = SubResource("SpriteFrames_ig7tw")
-frame_progress = 0.483883
-
-[node name="Idle" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-1, -4)
 sprite_frames = SubResource("SpriteFrames_uatky")
-frame_progress = 0.0649853
-
-[node name="Attack" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(1, -4)
-sprite_frames = SubResource("SpriteFrames_rqtf5")
-frame_progress = 0.994584
+animation = &"attack"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t52ob")
