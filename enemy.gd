@@ -17,4 +17,5 @@ func _physics_process(delta: float) -> void:
 	var direction = (target.global_position - global_position).normalized()
 
 	velocity = direction * speed
+	$Sprite.flip_h = velocity.x > 0
 	move_and_slide()

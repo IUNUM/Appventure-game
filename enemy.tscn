@@ -31,6 +31,7 @@ scale = Vector2(11.5262, 6.70452)
 shape = SubResource("CapsuleShape2D_5vw27")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-13, 14)
 scale = Vector2(0.214878, 0.214878)
 sprite_frames = SubResource("SpriteFrames_4c57u")
 frame_progress = 0.99647

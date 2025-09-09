@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 const SPEED = 500.0
 const JUMP_VELOCITY = -1000.0
-
 func _ready() -> void:
 	$Sprite.animation = "idle"
 	$Sprite.play()
@@ -24,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+
 	if velocity.x != 0:
 		$Sprite.animation = "running"
 		$Sprite.flip_v = false
@@ -33,7 +32,6 @@ func _physics_process(delta: float) -> void:
 	elif velocity.y != 0:
 		$Sprite.animation = "idle"
 	elif velocity.x == 0 and velocity.y== 0:
-		$Sprite.animation = "idle"
+			$Sprite.animation = "idle"
 		
-
 	move_and_slide()
