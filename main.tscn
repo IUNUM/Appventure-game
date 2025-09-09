@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=4 uid="uid://d1nl6ttyd8mlj"]
+[gd_scene load_steps=14 format=4 uid="uid://d1nl6ttyd8mlj"]
 
 [ext_resource type="Script" uid="uid://bre8oq1f61y73" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b7u08kvpo4gr3" path="res://yue_heng.tscn" id="1_ryguw"]
 [ext_resource type="PackedScene" uid="uid://e74xy7ppvodt" path="res://simu.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://nfbi368umm0p" path="res://yue_heng.gd" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bqqbgieyodsxf" path="res://camera_2d.tscn" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dlu5masyr6xbs" path="res://SAI/sai1.png" id="7_5vw27"]
+[ext_resource type="Script" uid="uid://bixc66ljsd05" path="res://enemy.gd" id="7_kek77"]
+[ext_resource type="Texture2D" uid="uid://xojcfynujbus" path="res://SAI/sai2.png" id="8_kek77"]
 [ext_resource type="Texture2D" uid="uid://yqokwlb3tlw7" path="res://tileset.png" id="22_d13ii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1u8w0"]
@@ -187,6 +190,23 @@ physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_1u8w0")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5vw27"]
+height = 24.4611
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4c57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kek77")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [node name="Node" type="Node" node_paths=PackedStringArray("player1", "player2")]
 script = ExtResource("1_7mycd")
 player1 = NodePath("Yue Heng")
@@ -214,3 +234,18 @@ position = Vector2(2, -4)
 scale = Vector2(27.3742, nan)
 player1 = NodePath("../Yue Heng")
 player2 = NodePath("../Simu")
+
+[node name="enemy" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+script = ExtResource("7_kek77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2(815, -467)
+scale = Vector2(11.5262, 6.70452)
+shape = SubResource("CapsuleShape2D_5vw27")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="enemy"]
+position = Vector2(801, -450)
+scale = Vector2(0.214878, 0.214878)
+sprite_frames = SubResource("SpriteFrames_4c57u")
+frame_progress = 0.184356
