@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://e74xy7ppvodt"]
+[gd_scene load_steps=25 format=3 uid="uid://e74xy7ppvodt"]
 
 [ext_resource type="Texture2D" uid="uid://bjyj56oegunly" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_0.png" id="1_boicq"]
 [ext_resource type="Script" uid="uid://dhist6v67hscj" path="res://simu.gd" id="1_e0j1e"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bgky83jyybpfe" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_5.png" id="18_8gihl"]
 [ext_resource type="Texture2D" uid="uid://c2t7ougynl016" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_6.png" id="19_f2ybs"]
 [ext_resource type="Texture2D" uid="uid://b172sftlpnpy" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_7.png" id="20_11kih"]
+[ext_resource type="Texture2D" uid="uid://2af6kai2sdp2" path="res://simu (1).png" id="22_yhhf5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uatky"]
 animations = [{
@@ -115,3 +116,8 @@ animation = &"attack"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_e0j1e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
+scale = Vector2(0.0176489, 0.0371861)
+texture = ExtResource("22_yhhf5")

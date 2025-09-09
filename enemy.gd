@@ -1,6 +1,6 @@
-extends CharacterBody2D
-
-@export var speed := 400.0
+RRRextends CharacterBody2D
+CDDDDA
+var speed := 300.0
 @export var player1: CharacterBody2D
 @export var player2: CharacterBody2D
 
@@ -18,4 +18,11 @@ func _physics_process(delta: float) -> void:
 
 	velocity = direction * speed
 	$Sprite.flip_h = velocity.x > 0
+	var collision = move_and_collide(velocity * delta)
 	move_and_slide()
+
+func slow(x : float):
+	speed = x;
+	await get_tree().create_timer(2).timeout
+	speed = 400
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b7u08kvpo4gr3"]
+[gd_scene load_steps=25 format=3 uid="uid://b7u08kvpo4gr3"]
 
 [ext_resource type="Texture2D" uid="uid://g1x6l71tqccp" path="res://Bandits/Sprites/Heavy Bandit/Run/HeavyBandit_Run_0.png" id="1_k2b5i"]
 [ext_resource type="Texture2D" uid="uid://dfxn5b8w72e7b" path="res://Bandits/Sprites/Heavy Bandit/Run/HeavyBandit_Run_1.png" id="2_010ss"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://5rimkd2x206x" path="res://Bandits/Sprites/Heavy Bandit/Idle/HeavyBandit_Idle_1.png" id="18_4qeuk"]
 [ext_resource type="Texture2D" uid="uid://fkhunakblbaw" path="res://Bandits/Sprites/Heavy Bandit/Idle/HeavyBandit_Idle_2.png" id="19_2qdqo"]
 [ext_resource type="Texture2D" uid="uid://cbacb2btkhwcc" path="res://Bandits/Sprites/Heavy Bandit/Idle/HeavyBandit_Idle_3.png" id="20_5w1o1"]
+[ext_resource type="Texture2D" uid="uid://bmfvxvw6wepj4" path="res://yh (1).png" id="21_010ss"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k2b5i"]
 radius = 9.0
@@ -103,6 +104,8 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_010ss"]
+
 [node name="Yue Heng" type="CharacterBody2D"]
 
 [node name="Collision" type="CollisionShape2D" parent="."]
@@ -113,5 +116,20 @@ shape = SubResource("CapsuleShape2D_k2b5i")
 texture_filter = 1
 position = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_b17eg")
-animation = &"running"
-frame_progress = 0.432676
+animation = &"attack"
+frame = 4
+frame_progress = 0.250416
+
+[node name="AttackHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox"]
+position = Vector2(-5, -5)
+rotation = 4.69199
+scale = Vector2(1.16599, 1.23651)
+shape = SubResource("CapsuleShape2D_010ss")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(0.0605283, 0.0275721)
+texture = ExtResource("21_010ss")

@@ -217,5 +217,6 @@ player1 = NodePath("../Yue Heng")
 player2 = NodePath("../Simu")
 
 [node name="enemy" parent="." node_paths=PackedStringArray("player1", "player2") instance=ExtResource("7_272bh")]
+position = Vector2(-1685, -485)
 player1 = NodePath("../Yue Heng")
 player2 = NodePath("../Simu")
