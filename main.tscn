@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://d1nl6ttyd8mlj"]
+[gd_scene load_steps=3 format=3 uid="uid://d1nl6ttyd8mlj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7dm0k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ig7tw"]
 
 [node name="Node" type="Node"]
+
+[node name="Yue Heng" type="CharacterBody2D" parent="."]
+
+[node name="Running" type="AnimatedSprite2D" parent="Yue Heng"]
+sprite_frames = SubResource("SpriteFrames_7dm0k")
+
+[node name="Simu" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Simu"]
+sprite_frames = SubResource("SpriteFrames_ig7tw")
