@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 500.0
-const JUMP_VELOCITY = -700.0
+const SPEED = 1000.0
+const JUMP_VELOCITY = -1500.0
 
 func _ready() -> void:
 	$Sprite.animation = "idle"
