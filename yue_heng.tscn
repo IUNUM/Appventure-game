@@ -21,8 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://fkhunakblbaw" path="res://Bandits/Sprites/Heavy Bandit/Idle/HeavyBandit_Idle_2.png" id="19_2qdqo"]
 [ext_resource type="Texture2D" uid="uid://cbacb2btkhwcc" path="res://Bandits/Sprites/Heavy Bandit/Idle/HeavyBandit_Idle_3.png" id="20_5w1o1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t52ob"]
-size = Vector2(27, 36)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k2b5i"]
+radius = 9.0
+height = 36.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b17eg"]
 animations = [{
@@ -105,8 +106,8 @@ animations = [{
 [node name="Yue Heng" type="CharacterBody2D"]
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 4)
-shape = SubResource("RectangleShape2D_t52ob")
+position = Vector2(1, 7)
+shape = SubResource("CapsuleShape2D_k2b5i")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

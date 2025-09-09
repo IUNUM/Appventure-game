@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://e74xy7ppvodt" path="res://simu.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://nfbi368umm0p" path="res://yue_heng.gd" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bqqbgieyodsxf" path="res://camera_2d.tscn" id="6_7mycd"]
-[ext_resource type="PackedScene" uid="uid://cyrwve1vanig0" path="res://enemy.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://yqokwlb3tlw7" path="res://tileset.png" id="22_d13ii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1u8w0"]

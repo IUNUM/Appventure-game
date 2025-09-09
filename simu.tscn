@@ -100,8 +100,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t52ob"]
-size = Vector2(27, 36)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e0j1e"]
+radius = 6.0
+height = 32.0
 
 [node name="Simu" type="CharacterBody2D"]
 script = ExtResource("1_e0j1e")
@@ -113,4 +114,4 @@ sprite_frames = SubResource("SpriteFrames_uatky")
 animation = &"attack"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_t52ob")
+shape = SubResource("CapsuleShape2D_e0j1e")
