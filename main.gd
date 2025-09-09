@@ -7,6 +7,8 @@ extends Node
 @export var max_distance: float = 1000.0
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
 	if not player1 or not player2:
 		return
 	
