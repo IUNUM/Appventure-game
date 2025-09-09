@@ -1,0 +1,132 @@
+[gd_scene load_steps=25 format=3 uid="uid://e74xy7ppvodt"]
+
+[ext_resource type="Texture2D" uid="uid://bjyj56oegunly" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_0.png" id="1_boicq"]
+[ext_resource type="Texture2D" uid="uid://cr32k3t4a02vh" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_1.png" id="2_e0j1e"]
+[ext_resource type="Texture2D" uid="uid://ulc24wio2wbw" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_2.png" id="3_yhhf5"]
+[ext_resource type="Texture2D" uid="uid://888ha7d8sukh" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_3.png" id="4_htewe"]
+[ext_resource type="Texture2D" uid="uid://drw70hmo0u6is" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_4.png" id="5_kvdkd"]
+[ext_resource type="Texture2D" uid="uid://cir3ys4ptjbk8" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_5.png" id="6_8syfu"]
+[ext_resource type="Texture2D" uid="uid://cs1pkv6y0fvvc" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_6.png" id="7_qnfle"]
+[ext_resource type="Texture2D" uid="uid://x7wg20jb734w" path="res://Bandits/Sprites/Light Bandit/Run/LightBandit_Run_7.png" id="8_jsrfs"]
+[ext_resource type="Texture2D" uid="uid://cvcek8dmlsdse" path="res://Bandits/Sprites/Light Bandit/Combat Idle/LightBandit_Combat Idle_0.png" id="9_u6rtj"]
+[ext_resource type="Texture2D" uid="uid://cisdr0i4eff0y" path="res://Bandits/Sprites/Light Bandit/Combat Idle/LightBandit_Combat Idle_1.png" id="10_bpfrp"]
+[ext_resource type="Texture2D" uid="uid://31x3g25v1dbl" path="res://Bandits/Sprites/Light Bandit/Combat Idle/LightBandit_Combat Idle_2.png" id="11_bc1s2"]
+[ext_resource type="Texture2D" uid="uid://cbanhwcuy5r0h" path="res://Bandits/Sprites/Light Bandit/Combat Idle/LightBandit_Combat Idle_3.png" id="12_w68gy"]
+[ext_resource type="Texture2D" uid="uid://djxqehjf3s8wx" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_0.png" id="13_wvpn3"]
+[ext_resource type="Texture2D" uid="uid://3qt1ejr8su62" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_1.png" id="14_fqwth"]
+[ext_resource type="Texture2D" uid="uid://nl8uyk7ehdcs" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_2.png" id="15_n62jb"]
+[ext_resource type="Texture2D" uid="uid://dqlvb4wmvmx5t" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_3.png" id="16_qc8by"]
+[ext_resource type="Texture2D" uid="uid://dcs4otiv4ea1c" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_4.png" id="17_el3rg"]
+[ext_resource type="Texture2D" uid="uid://bgky83jyybpfe" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_5.png" id="18_8gihl"]
+[ext_resource type="Texture2D" uid="uid://c2t7ougynl016" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_6.png" id="19_f2ybs"]
+[ext_resource type="Texture2D" uid="uid://b172sftlpnpy" path="res://Bandits/Sprites/Light Bandit/Attack/LightBandit_Attack_7.png" id="20_11kih"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ig7tw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_boicq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e0j1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yhhf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_htewe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kvdkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8syfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qnfle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jsrfs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uatky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_u6rtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bpfrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bc1s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w68gy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rqtf5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_wvpn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fqwth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_n62jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qc8by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_el3rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8gihl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_f2ybs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_11kih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t52ob"]
+size = Vector2(27, 36)
+
+[node name="Simu" type="CharacterBody2D"]
+
+[node name="Running" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2, -4)
+sprite_frames = SubResource("SpriteFrames_ig7tw")
+frame_progress = 0.483883
+
+[node name="Idle" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1, -4)
+sprite_frames = SubResource("SpriteFrames_uatky")
+frame_progress = 0.0649853
+
+[node name="Attack" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -4)
+sprite_frames = SubResource("SpriteFrames_rqtf5")
+frame_progress = 0.994584
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t52ob")
