@@ -187,8 +187,10 @@ physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_1u8w0")
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" node_paths=PackedStringArray("player1", "player2")]
 script = ExtResource("1_7mycd")
+player1 = NodePath("Yue Heng")
+player2 = NodePath("Simu")
 
 [node name="Yue Heng" parent="." instance=ExtResource("1_ryguw")]
 position = Vector2(313, -182)
