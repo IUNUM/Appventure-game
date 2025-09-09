@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://d1nl6ttyd8mlj"]
+[gd_scene load_steps=9 format=4 uid="uid://d1nl6ttyd8mlj"]
 
+[ext_resource type="Script" uid="uid://cjqcmqp4xrbrj" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b7u08kvpo4gr3" path="res://yue_heng.tscn" id="1_ryguw"]
 [ext_resource type="PackedScene" uid="uid://e74xy7ppvodt" path="res://simu.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://nfbi368umm0p" path="res://yue_heng.gd" id="2_lquwl"]
 [ext_resource type="Script" uid="uid://6l2glp4aa43c" path="res://camera_2d.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://yqokwlb3tlw7" path="res://tileset.png" id="22_d13ii"]
 
@@ -186,10 +188,12 @@ terrain_set_0/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_1u8w0")
 
 [node name="Node" type="Node"]
+script = ExtResource("1_7mycd")
 
 [node name="Yue Heng" parent="." instance=ExtResource("1_ryguw")]
 position = Vector2(313, -182)
 scale = Vector2(6.85402, 6.85402)
+script = ExtResource("2_lquwl")
 
 [node name="Simu" parent="." instance=ExtResource("2_h2yge")]
 position = Vector2(-135, -174)
