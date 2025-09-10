@@ -1,5 +1,5 @@
-RRRextends CharacterBody2D
-CDDDDA
+extends CharacterBody2D
+
 var speed := 300.0
 @export var player1: CharacterBody2D
 @export var player2: CharacterBody2D
